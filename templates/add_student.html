@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/global.css">
+    <link rel="stylesheet" href="../static/add.css">
+
+    <title>Adicionar Aluno</title>
+</head>
+<body>
+    <header>
+        <h1>Cadastrar Aluno</h1>
+    </header>
+
+    <form id="cadastrar_aluno" method="post" action="/User/create">
+
+        <label>Nome Completo</label>
+        <input placeholder="Nome Completo" class="add_name" type="text" name="name">
+
+        <label>Idade</label>
+        <input placeholder="" class="add_age" type="number" name="age">
+
+        <label>CPF</label>
+        <input placeholder="xxx.xxx.xxx-xx" class="add_cpf" type="text" name="cpf">
+
+        <label>Email</label>
+        <input placeholder="" class="add_email" type="email" name="email">
+
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>

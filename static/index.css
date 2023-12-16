@@ -1,0 +1,50 @@
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(to top, rgb(146, 209, 252), rgb(218, 244, 255));
+}
+
+header {
+    /* background-color: aqua; */
+    padding: 50px;
+    margin: 120px auto;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 4em;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    /* background-color: aquamarine; */
+    width: 60%;
+    height: 200px;
+    margin: auto;
+}
+
+main a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: black;
+    height: fit-content;
+    padding: 30px;
+    border: 1px solid rgb(142, 223, 255);
+    border-radius: 35px;
+    background-color: rgb(96, 255, 168);
+    box-shadow: 2px 2px 2px rgba(147, 206, 255, 0.74);
+}
+
+main a:hover {
+    color: white;
+    padding: 25px;
+    margin: 0px 5px 0px 5px;
+    box-shadow: 2px 2px 2px rgba(147, 206, 255, 0.74) inset;
+}
+
+main a:active {
+    padding: 5px 25px 5px 25px;
+}

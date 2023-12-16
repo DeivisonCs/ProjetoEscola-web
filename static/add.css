@@ -1,0 +1,105 @@
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(to top, rgb(146, 209, 252), rgb(218, 244, 255));
+}
+
+header {
+    /* background-color: aqua; */
+    font-size: 1.5em;
+    padding: 50px 0px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px rgba(128, 128, 128, 0.397);
+}
+
+form {
+    display: flex;
+    background-color: blanchedalmond;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    padding-top: 70px;
+    height: 600px;
+    width: 70%;
+    border: 1px solid rgba(160, 160, 160, 0.596);
+    border-radius: 30px;
+    box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.74);
+}
+
+form input{
+    width: 40%;
+    min-width: 250px;
+    height: 7%;
+    border: 1px solid rgba(121, 121, 121, 0.658);
+    border-radius: 8px;
+    box-shadow: 1px 1px 2px rgba(97, 97, 97, 0.651);
+    margin-bottom: 30px;
+    margin-top: 5px;
+    padding: 9px;
+    letter-spacing: 1.4px;
+}
+
+form input:focus {
+    outline: none;
+    border: 1px solid grey;
+    box-shadow: 1px 1px 5px rgba(97, 97, 97, 0.651);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+form label {
+    font-size: 1.2em;
+}
+
+form button {
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 3px;
+    padding: 10px;
+    width: 20%;
+    margin-top: 30px;
+    background-color: rgba(21, 228, 255, 0.74);
+    border: none;
+    border-radius: 20px;
+    border: 1px solid rgba(66, 66, 66, 0.308);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.781);
+}
+
+form button:hover {
+    font-size: 1em;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.781) inset;
+}
+
+@media screen and (max-width: 830px){
+    body {
+
+        background-image: none;
+        background-color: blanchedalmond;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    form {
+        border: none;
+        box-shadow: none;
+    }
+
+    form input {
+        width: 70%;
+        
+    }
+
+    form button {
+        width: fit-content;
+    }
+}

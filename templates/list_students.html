@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Alunos</title>
+</head>
+<body>
+
+    <h1>Alunos Cadastrados</h1>
+
+    <ul>
+        {% for student in Students_all %}
+        <li>
+            <span>{{ student.name }}</span>
+            <span>{{ student.age }}</span>
+            <span>{{ student.email }}</span>
+            <span>{{ student.cpf }}</span>
+
+            <a href="/User/update/{{student.id}}">Editar</a>
+            <a href="/User/remove/{{student.id}}">Remover</a>
+        </li>
+        {%endfor%}
+    </ul>
+    
+</body>
+</html>
