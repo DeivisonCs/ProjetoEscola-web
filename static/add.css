@@ -4,6 +4,10 @@ body {
     background-image: linear-gradient(to top, rgb(146, 209, 252), rgb(218, 244, 255));
 }
 
+.must_fill::after {
+    content: '*';
+}
+
 header {
     /* background-color: aqua; */
     font-size: 1.5em;
@@ -53,6 +57,10 @@ form input:focus {
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
+}
+
+input[type="date"] {
+    color: grey;
 }
 
 form label {

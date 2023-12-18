@@ -15,19 +15,28 @@
 
     <form id="cadastrar_aluno" method="post" action="/User/create">
 
-        <label>Nome Completo</label>
+        <label class="must_fill">Nome Completo</label>
         <input placeholder="Nome Completo" class="add_name" type="text" name="name">
 
-        <label>Idade</label>
-        <input placeholder="" class="add_age" type="number" name="age">
+        <label class="must_fill">Data de Nascimento</label>
+        <input placeholder="" class="add_age" type="date" name="birth_date">
 
-        <label>CPF</label>
+        <label class="must_fill">CPF</label>
         <input placeholder="xxx.xxx.xxx-xx" class="add_cpf" type="text" name="cpf">
 
-        <label>Email</label>
+        <label class="must_fill">Email</label>
         <input placeholder="" class="add_email" type="email" name="email">
 
         <button type="submit">Cadastrar</button>
     </form>
+
+    {% if show_alert==True %}
+        <script>
+            let msg = "{{ mensage }}";
+
+            // console.log(msg)
+            alert(msg);
+        </script>
+    {% endif %}
 </body>
 </html>

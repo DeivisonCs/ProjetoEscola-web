@@ -18,6 +18,7 @@ header h1 {
 main {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     gap: 10%;
     /* background-color: aquamarine; */
@@ -27,6 +28,7 @@ main {
 }
 
 main a {
+    text-wrap: nowrap;
     text-decoration: none;
     font-size: 1.2em;
     color: black;
