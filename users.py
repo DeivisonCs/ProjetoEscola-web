@@ -30,13 +30,13 @@ def create():
         elif valid == 0:
             return render_template('add_student.html', mensage='Preencha todos os campos!', show_alert=True)
 
-        elif valid == 1:
+        elif valid == "Idade Inválida!":
             return render_template('add_student.html', mensage='Idade Inválida!', show_alert=True)
         
-        elif valid == 2:
+        elif valid == "CPF inválido":
             return render_template('add_student.html', mensage='CPF Inválido!', show_alert=True)
 
-        elif valid == 3:
+        elif valid == "CPF ja cadastrado":
             return render_template('add_student.html', mensage='CPF já Cadastrado!', show_alert=True)
         
 
@@ -87,15 +87,15 @@ def valid_cad(name, birth_date, cpf, email):
     age = valid_age(birth_date)
 
     if age <= 0:
-        return 1
+        return "Idade Inválida!"
     
     cpf_valid = valid_cpf(cpf)
 
     if cpf_valid == "CPF inválido":
-        return 2
+        return "CPF inválido"
     
     if cpf_valid == "CPF ja cadastrado":
-        return 3
+        return "CPF ja cadastrado"
     
     return True
     

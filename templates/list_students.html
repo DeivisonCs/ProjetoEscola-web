@@ -3,25 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/global.css">
+    <link rel="stylesheet" href="../static/list.css">
+
     <title>Listar Alunos</title>
 </head>
 <body>
+    <header>
+        <h1>Alunos Cadastrados</h1>
+    </header>
 
-    <h1>Alunos Cadastrados</h1>
+    <main>
+        <ul>
+            {% for student in Students_all %}
+            <li>
+               <div class="about">
+                    <span class="type">
+                        <span>Nome</span>
+                        <span>{{ student.name }}</span>
+                    </span>
+                    <span class="type">
+                        <span>Idade</span>
+                        <span>{{ student.age }}</span>
+                    </span>
+                    <span class="type">
+                        <span>CPF</span>
+                        <span>{{ student.cpf }}</span>
+                    </span>
+                    <span class="type">
+                        <span>Email</span>
+                        <span>{{ student.email }}</span>
+                    </span>
+                </div>
 
-    <ul>
-        {% for student in Students_all %}
-        <li>
-            <span>{{ student.name }}</span>
-            <span>{{ student.birth_date }}</span>
-            <span>{{ student.email }}</span>
-            <span>{{ student.cpf }}</span>
-
-            <a href="/User/update/{{student.id}}">Editar</a>
-            <a href="/User/remove/{{student.id}}">Remover</a>
-        </li>
-        {%endfor%}
-    </ul>
+                <div class="options">
+                    <a href="/User/update/{{student.id}}">Editar</a>
+                    <a href="/User/remove/{{student.id}}">Remover</a>
+                </div>
+            </li>
+            {%endfor%}
+        </ul>
+    </main>
     
 </body>
 </html>

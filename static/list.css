@@ -1,0 +1,123 @@
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(to top, rgb(146, 209, 252), rgb(218, 244, 255));
+}
+
+
+header {
+    /* background-color: aqua; */
+    padding: 10px;
+    margin: 50px auto;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 4em;
+}
+
+main {
+    margin: 100px 40px;
+}
+
+main ul{
+    list-style: none;
+    font-size: 1.2em;
+    /* display: flex;
+    flex-direction: column; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+main ul li {
+    display: flex;
+    flex-direction: column;
+    background-color: blanchedalmond;
+    border-radius: 20px;
+    border: 1px solid rgba(66, 66, 66, 0.308);
+    box-shadow: 2px 2px 2px rgba(165, 165, 165, 0.781);
+    padding: 25px;
+}
+
+main ul li .about {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main ul li div .type {
+    display: grid;
+    /* grid-template-columns: 10% 90%; */
+    grid-template-columns: .5fr 1fr;
+}
+
+
+main ul li div .type > :first-child{
+    font-weight: bold;
+}
+
+main ul li div .type > :first-child::after{
+    content: ':';
+}
+
+main ul li .options {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    gap: 15px;
+}
+
+main ul li a {
+    text-decoration: none;
+    text-align: center;
+    background-color: rgba(21, 228, 255, 0.74);
+    width: 80px;
+    padding: 5px 8px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px rgba(155, 154, 154, 0.445);
+}
+
+main ul li a:hover {
+    filter: brightness(1.3);
+    padding: 3px 5px;
+    margin: 0px 3.5px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px rgba(94, 94, 94, 0.534) inset;
+} 
+
+@media screen and (max-width: 900px){
+    main {
+        margin: 10px;
+    }
+
+    main ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    main ul li div .type > :first-child{
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        margin: 0px;
+    }
+
+    main ul li div .type > :first-child{
+        margin: 10px 0px 7px 0px;
+    }
+
+    main ul li div .type > :first-child::after{
+        content: "";
+    }
+
+    main ul li div .type {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
