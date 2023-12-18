@@ -1,3 +1,7 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 
 body {
     height: 100vh;
@@ -28,7 +32,7 @@ form {
     flex-direction: column;
     margin: auto;
     padding-top: 70px;
-    height: 600px;
+    min-height: 600px;
     width: 70%;
     border: 1px solid rgba(160, 160, 160, 0.596);
     border-radius: 30px;
@@ -67,7 +71,8 @@ form label {
     font-size: 1.2em;
 }
 
-form button {
+form button,a {
+    text-align: center;
     font-weight: 500;
     font-size: 1.2em;
     letter-spacing: 3px;
@@ -81,7 +86,23 @@ form button {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.781);
 }
 
+form a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1em;
+    width: 10%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    background-color: rgb(253, 99, 99);
+}
+
 form button:hover {
+    font-size: 1em;
+    margin-bottom: 4px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.781) inset;
+}
+form a:hover {
     font-size: 1em;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.781) inset;
 }
@@ -108,6 +129,9 @@ form button:hover {
     }
 
     form button {
+        width: fit-content;
+    }
+    form a {
         width: fit-content;
     }
 }
