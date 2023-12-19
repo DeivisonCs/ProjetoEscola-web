@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/global.css">
+    <link rel="stylesheet" href="../../static/add.css">
 
     <title>Atualizar Aluno</title>
 
 </head>
 <body>
-    <h1>Atualizar Aluno</h1>
+    <header>
+        <h1>Atualizar Aluno</h1>
+    </header>
 
     <form action="/User/update/{{User.id}}" method="post">
         <label>Nome Completo</label>
         <input value="{{User.name}}" placeholder="Nome Completo" class="add_name" type="text" name="name">
 
         <label>Idade</label>
-        <input value="{{User.birth_date}}" placeholder="" class="add_age" type="number" name="birth_date">
+        <input value="{{User.age}}" placeholder="" class="add_age" type="number" name="birth_date">
 
         <label>CPF</label>
         <input value="{{User.cpf}}" placeholder="xxx.xxx.xxx-xx" class="add_cpf" type="text" name="cpf">
@@ -23,8 +27,17 @@
         <label>Email</label>
         <input value="{{User.email}}" placeholder="" class="add_email" type="email" name="email">
 
-        <button type="submit">Cadastrar</button>
+        <button type="submit">Atualizar</button>
+        <a href="/User/list">Voltar</a>
     </form>
     
+    {% if show_alert==True %}
+        <script>
+            let msg = "{{ mensage }}";
+
+            // console.log(msg)
+            alert(msg);
+        </script>
+    {% endif %}
 </body>
 </html>
